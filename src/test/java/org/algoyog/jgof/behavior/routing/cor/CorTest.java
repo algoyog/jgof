@@ -1,5 +1,6 @@
 package org.algoyog.jgof.behavior.routing.cor;
 
+import org.algoyog.jgof.BaseTest;
 import org.algoyog.jgof.common.Request;
 import org.algoyog.jgof.common.Response;
 import org.junit.jupiter.api.AfterEach;
@@ -10,7 +11,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-public class CorTest {
+public class CorTest extends BaseTest {
     Handler h1 = new Handler() {
         @Override
         public Response handle(Request request) {
@@ -27,25 +28,11 @@ public class CorTest {
         }
     };
 
-    private final PrintStream standardOut = System.out;
-    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-
-    @BeforeEach
-    public void setUp(){
-        System.setOut(new PrintStream(outputStreamCaptor));
-    }
-
     @Test
     public void test_cor_flow(){
         h1.setNext_handler(h2);
         h1.execute(new Request());
         Assertions.assertEquals("In Handler1\nIn Handler2",outputStreamCaptor.toString().trim());
-    }
-
-
-    @AfterEach
-    public void tearDown(){
-        System.setOut(standardOut);
     }
 
 }
