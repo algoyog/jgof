@@ -3,13 +3,9 @@ package org.algoyog.jgof.behavior.routing.cor;
 import org.algoyog.jgof.BaseTest;
 import org.algoyog.jgof.common.Request;
 import org.algoyog.jgof.common.Response;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 public class CorTest extends BaseTest {
     Handler h1 = new Handler() {
