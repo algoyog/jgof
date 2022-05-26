@@ -8,7 +8,7 @@ Use this project to educate and use the barebone classes defined into any source
 The patterns that impact the software by evolving or changing of behaviour at runtume.
 #### routing oriented
 These patterns specialize in routing, communication impacts.
-- Chain of Responsibility (cor)
+- [Chain of Responsibility (cor)](./src/main/java/org/algoyog/jgof/behavior/routing/cor/cor.md)
 - Mediator
 - Observer
 - Command
