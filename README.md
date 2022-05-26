@@ -49,3 +49,12 @@ These patterns specialize in management of object creations.
 
 ## Notes
 - Remember, patterns can be combined to form various new patterns.
+
+
+## Usage
+### Pre-requisite
+- Install JDK (11+)
+- Install maven
+### Source 
+- The main contains source code for all the patterns listed.
+- The test projects contains the tests which can be treated as sample client implementation.
